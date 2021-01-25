@@ -10,7 +10,7 @@ jobs:
     image: maven:3.6.3-openjdk-8
     annotations:
       screwdriver.cd/cpu: 8
-      screwdriver.cd/ram: 8
+      screwdriver.cd/ram: 12
       screwdriver.cd/disk: 8
       screwdriver.cd/timeout: 120
 
@@ -18,4 +18,4 @@ jobs:
       - install_dependencies: "screwdriver/scripts/install_deps.sh"
       #- pre_build: "screwdriver/scripts/prepare_build.sh"
       - build: "screwdriver/scripts/build.sh"
-      - publish: "screwdriver/scripts/publish.sh"
+      #- publish: "screwdriver/scripts/publish.sh"
