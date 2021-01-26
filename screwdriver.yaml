@@ -16,6 +16,8 @@ jobs:
 
     steps:
       - install_dependencies: "screwdriver/scripts/install_deps.sh"
+      - cpu: lscpu || true
+      - mem: free -gh || true
       #- pre_build: "screwdriver/scripts/prepare_build.sh"
       - build: "screwdriver/scripts/build.sh"
       #- publish: "screwdriver/scripts/publish.sh"
